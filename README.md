@@ -14,23 +14,23 @@ This TO-DO List Application is a simple yet powerful tool to help you manage you
 
 ### Sign Up Page
 
-![Signup Page](assets/Signup.png)
+![Signup Page](Frontend/assets/Signup.png)
 
 ### Login Page
 
-![Login Page](assets/Login.png)
+![Login Page](Frontend/assets/Login.png)
 
 ### Home Page
 
-![Home Page](assets/Home.png)
+![Home Page](Frontend/assets/Home.png)
 
 ### Task Creation
 
-![Task Creation](assets/addNewTask.png)
+![Task Creation](Frontend/assets/addNewTask.png)
 
 ### Task List
 
-![Task List](assets/Status.png)
+![Task List](Frontend/assets/Status.png)
 
 ## Getting Started
 
