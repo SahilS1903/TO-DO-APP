@@ -1,9 +1,31 @@
 // src/components/TaskCard.jsx
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const TaskCard = ({ task }) => {
+  const navigate = useNavigate();
+  const confirmPurchase = async (id) => {
+    try {
+      await axios.put(
+        `http://localhost:3000/api/task/tasks/${id}/buy`,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${JSON.parse(
+              localStorage.getItem("accessToken")
+            )}`,
+          },
+        }
+      );
+      alert("Purchase successful!");
+    } catch (error) {
+      console.error("Error purchasing task:", error);
+      alert("Failed to complete purchase. Please try again.");
+    }
+    navigate("/");
+  };
+
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 m-4">
       <div className="p-4">
